@@ -1,0 +1,31 @@
+<header>
+	<div class="container no_left no_right">
+		<div class="row">
+			<div class="col-md-4 col-xs-12">
+				<div class="logo">
+					<a href="{% url 'home' %}">
+						<h1>SIN<span class="blue">COMPLIQUE</span> </h1>
+					</a>
+					<p class="slogan">TRAMITES EN LINEA</p>
+					<div class="block"></div>
+				</div>
+			</div>
+			<div class="col-md-8 col-xs-12 right_header no_right right_header">
+				<ul class="fr">
+					{% if user.is_authenticated %}
+						<li>
+							<a href="{% url 'logout' %}">Cerrar Sesión</a>
+						</li>
+					{% else %}
+						<li>
+							<a href="{% url 'login' %}">Iniciar Sesión</a>
+						</li>
+						<li>
+							<a href="{% url 'registrate' %}">Registrarme</a>
+						</li>
+					{% endif %}
+				</ul>
+			</div>
+		</div>
+	</div>
+</header>

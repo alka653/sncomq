@@ -1,0 +1,99 @@
+{% extends 'layout/base.html' %}
+
+{% load staticfiles %}
+
+{% block content %}
+	{% include 'elements/nav.html' %}
+	<div  id="content" class="bg-gradient container  no_left no_right">
+		{% include 'elements/menu.html' %}
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-xs-12">
+					<h2>REALIZE SU TRAMITE DE:</h2>
+					<div class="content-text">
+						<ul class="grey-list">
+							<li>
+								<span class="grey"> URBANIZACION  </span> 
+							</li>
+							<li>
+								<span class="grey"> CONSTRUCCION </span>
+							</li>
+							<li>
+								<span class="grey"> AMPLIACION </span>
+							</li>
+							<li>
+								<span class="grey"> ENTRE OTROS </span>
+							</li>
+						</ul>
+					</div>
+					<div class="bg-white radius">
+						<img src="{% static 'images/fond_bloc2.jpg' %}" alt="images" class="fl">
+						<div class="text-content">
+							<p>QUE BUSCA SINCOMPLIQUE?</p>
+							<ul class="blue-list">
+								<li>
+									Busca reducir tiempos, pasos, costos y requisitos para la obtención de los trámites de construcción que se deben gestionar ante las entidades como el Municipio y las Curadurías Urbanas.asos, costos y requisitos para la obtención de los trámites de construcción que se deben gestionar ante las entidades como el Municipio y las Curadurías Urbanas.
+								</li>
+							</ul>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<aside class="col-md-6 col-xs-12">
+					<div class="row">
+						<div class="col-md-6 col-xs-12 no_left">
+							<div class="bloc-blue radius shadow">
+								<h4>LISTA DE REQUISITOS</h4>
+								<p>PARA APROBACION DE CONSTRUCCIONES INDIVIDUALES EN ELMUNICIPIO DEL CARMEN DE APICALA</p>
+								<a class="grey-gradient" href="{% url 'download_file' %}?file=lista-de-requisitos.docx"><img src="../images (2).jpg" width="66" height="39"></a>
+							</div>
+							<div class="reflect blue hide-mobile"></div>
+						</div>
+						<div class="col-md-6 col-xs-12 no_right">
+							<div class="bloc-blue radius shadow">
+								<h4>FORMULARIO</h4>
+								<p>FORMULARIO UNICO NACIONALDE SOLICITUD DE LICENCIAS </br></br></p>
+								<a class="grey-gradient" href="{% url 'download_file' %}?file=lista-de-requisitos.docx"><img src="../images (2).jpg" width="66" height="39"></a>
+							</div>
+							<div class="reflect green hide-mobile"></div>
+						</div>
+					</div>
+					<div class="row">
+						<ul class="calendar">
+							<li>
+								<div class="date-event">
+									<span class="date">388</span>
+									<span class="mois">LEY</span>
+								</div>
+								<div class="event">
+									<p>DECRETO 1469 DE 2010      DOCUMENTACION SOLICITUDES Y VIGENCIAS  </p>
+									</br><a href="http://www.alcaldiabogota.gov.co/sisjur/normas/Norma1.jsp?i=39477" class="fr"><div class="bloc-blue radius shadow">VER MAS.</div></a>
+								</div>
+							</li>
+							<li>
+								<div class="date-event">
+									<span class="date">810</span>
+									<span class="mois">LEY</span>
+								</div>
+								<div class="event">
+									<p>DEL 2003 SANCIONES URBANISTICAS.</p>
+									<a href="http://www.alcaldiabogota.gov.co/sisjur/normas/Norma1.jsp?i=8610" class="fr"><div class="bloc-blue radius shadow">VER MAS.</div></a>
+								</div>
+							</li>
+							<li>
+								<div class="date-event">
+									<span class="date">912</span>
+									<span class="mois">RESOLU</span>
+								</div>
+								<div class="event">
+									<p>RESOLUCION 912 DE 15 DE MAYO DE 2009 </br>DERECHO URBANISTICO, MINISTERIO DE AMBIENTE, VIVIENDA Y DESARROLLO TERRITORIAL</p>
+									</br><a href="http://www.alcaldiabogota.gov.co/sisjur/normas/Norma1.jsp?i=39477" class="fr"><div class="bloc-blue radius shadow">VER MAS.</div></a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</aside>
+			</div>
+		</div>
+	</div>
+{% endblock content %}

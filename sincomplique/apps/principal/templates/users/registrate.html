@@ -1,0 +1,38 @@
+{% extends 'layout/base.html' %}
+
+{% block content %}
+	{% include 'elements/nav.html' %}
+	<div id="content" class="bg-gradient container  no_left no_right">
+		<form role="form" action="{% url 'registrate' %}" method="POST">
+			{% csrf_token %}
+			{% for forms in form %}
+				<div class="form-group col-md-6">
+					<label>{{ forms.label }}</label>
+					{{ forms }}
+				</div>
+			{% endfor %}
+			<div class="form-group text-center">
+				<button type="submit" class="btn btn-success">Registrarme</button>
+			</div>
+		</form>
+	</div>
+{% endblock content %}
+
+{% block content_script %}
+	$("#id_cc_residencia_depart").change(function() {
+		$.post("{% url 'get_municipio' %}", {depto: $(this).val()}, function(response){
+			$("#id_cc_residencia_muni option").remove();
+			for(var i = 0; i< response.length; i++) {
+				$("#id_cc_residencia_muni").append('<option value="'+response[i].pk+'">'+response[i].muni+'</option>')
+			}
+		});
+	});
+	$("#id_ciudad_residencia_depart").change(function() {
+		$.post("{% url 'get_municipio' %}", {depto: $(this).val()}, function(response){
+			$("#id_ciudad_residencia_muni option").remove();
+			for(var i = 0; i< response.length; i++) {
+				$("#id_ciudad_residencia_muni").append('<option value="'+response[i].pk+'">'+response[i].muni+'</option>')
+			}
+		});
+	});
+{% endblock content_script %}
