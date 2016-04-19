@@ -10,6 +10,9 @@ class Departamento(models.Model):
 	def __unicode__(self):
 		return self.desc
 
+	class Meta:
+		ordering = ['desc']
+
 class Municipio(models.Model):
 	depto = models.ForeignKey(Departamento)
 	desc = models.CharField(max_length = 45)
@@ -19,3 +22,6 @@ class Municipio(models.Model):
 
 	def __unicode__(self):
 		return self.desc
+
+	class Meta:
+		ordering = ['desc']
