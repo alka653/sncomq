@@ -81,6 +81,18 @@ LOGIN_REDIRECT_URL = '/'
 
 LOGIN_URL = '/users/login'
 
+
+# CONFIGURATION RESET PASSWORD
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'adriann.sanchez1@gmail.com'
+SERVER_EMAIL = 'adriann.sanchez1@gmail.com'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'adriann.sanchez1@gmail.com'
+EMAIL_HOST_PASSWORD = 'ALKA3118491381'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# END
+
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 DATABASES = {

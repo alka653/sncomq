@@ -7,6 +7,8 @@ login_forbidden = user_passes_test(lambda u: u.is_anonymous(), '/')
 
 urlpatterns = patterns('sincomplique.apps.users.views',
 	url(r'^registrate/$', login_forbidden(UserRegistrateView.as_view()), name = 'registrate'),
+	url(r'^reset_password_confirm/(?P<uidb64>[0-9A-Za-z]+)-(?P<token>.+)/$', PasswordResetConfirmView.as_view(),name='reset_password_confirm'),
+	url(r'^reset_password', ResetPasswordRequestView.as_view(), name = "reset_password"),
 )
 
 urlpatterns += [
